@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ATS Resume Tool</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    color: white;
+}
+
+.card {
+    border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+<h1 class="text-center mb-4">🚀 ATS Resume Optimizer</h1>
+
+<div class="card p-4 text-dark">
+
+<form action="/analyze" method="post" enctype="multipart/form-data">
+
+<input type="file" name="resume" class="form-control mb-3" required>
+
+<textarea name="job_desc" class="form-control mb-3" placeholder="Job Description" required></textarea>
+
+<button class="btn btn-primary w-100">Analyze Resume</button>
+
+</form>
+
+<hr>
+
+<div class="text-center">
+<a href="/builder" class="btn btn-warning">Build Resume</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

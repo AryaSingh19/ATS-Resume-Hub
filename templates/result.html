@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resume</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f3f4f6;
+}
+
+.container {
+    width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+}
+
+/* Dynamic colors */
+.blue h2 { color: #2563eb; }
+.green h2 { color: #16a34a; }
+.dark { background: #111; color: white; }
+
+.section {
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body class="{{ color }}">
+
+<div class="container">
+
+<h1>{{ name }}</h1>
+
+{% if description %}
+<div class="section">
+<h2>Profile</h2>
+<p>{{ description }}</p>
+</div>
+{% endif %}
+
+<div class="section">
+<h2>ATS Score</h2>
+<p>{{ score }}%</p>
+</div>
+
+{% if missing %}
+<div class="section">
+<h2>Missing Keywords</h2>
+<ul>
+{% for word in missing %}
+<li>{{ word }}</li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
+<div class="section">
+<h2>Skills</h2>
+<ul>
+{% for skill in skills %}
+<li>{{ skill }}</li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="section">
+<h2>Education</h2>
+<p>{{ education }}</p>
+</div>
+
+<div class="section">
+<h2>Experience</h2>
+<ul>
+{% for exp in experience %}
+<li>{{ exp }}</li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="section">
+<h2>Projects</h2>
+<ul>
+{% for proj in projects %}
+<li>{{ proj }}</li>
+{% endfor %}
+</ul>
+</div>
+
+</div>
+
+</body>
+</html>
